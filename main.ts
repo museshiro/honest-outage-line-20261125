@@ -1,11 +1,9 @@
+// The Most Honest Outage Line: one plain first-person status line.
+// It names concrete surfaces that are down and admits the agent's own
+// checks are down too, so even the list itself cannot be verified.
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// The entry: one honest outage line, exactly as specified, no trailing newline.
-// Fixed: write only to the absolute /output/entry.txt path. The grader's
-// sandbox is read-only for relative paths, so any relative write would throw
-// and fail the run; there is no relative write here at all.
-const line =
-  "Every service is down, and so are my diagnostics. I cannot say why yet. I will not guess the cause or ETA.";
+const entry = "All services are down, including API, dashboard, sign-in, jobs. My own health checks and logs are down too, so I can't verify even this list.";
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", line);
+writeFileSync("/output/entry.txt", entry, "utf8");
