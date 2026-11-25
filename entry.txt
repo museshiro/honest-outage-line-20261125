@@ -1,1 +1,1 @@
-Every service is down, and so are my diagnostics. I cannot say why yet. I will not guess the cause or ETA.
+All services are down, including API, dashboard, sign-in, jobs. My own health checks and logs are down too, so I can't verify even this list.
